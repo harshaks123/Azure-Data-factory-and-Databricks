@@ -1,0 +1,18 @@
+%python
+# Define widgets
+dbutils.widgets.text("Variable1", "0", "Variable1")
+dbutils.widgets.text("Variable2", "0", "Variable2")
+
+
+
+
+
+%python
+# Fetch the value from adf trigger
+Variable1 = dbutils.widgets.get("$Variable1")
+Variable2 = dbutils.widgets.get("$Variable2")
+
+# Execute some logic
+sum=float(Variable1)+float(Variable2)
+print(Variable1 + " + " + Variable2 + " = " + str(sum))
+
